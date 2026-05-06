@@ -1,0 +1,8 @@
+{
+  "name": "ai-driven-programing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest"
+  }
+}
