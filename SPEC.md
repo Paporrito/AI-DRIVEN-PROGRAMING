@@ -59,3 +59,29 @@ Esta primera versión únicamente cubrirá la funcionalidad básica de saludo in
 - La aplicación debe ser lo bastante simple como para poder probarse automáticamente.
 - Los tests deberán derivarse de esta especificación.
 - La implementación posterior no deberá modificar estos requisitos sin actualizar antes este documento.
+
+## Mejora propuesta: botón para limpiar el campo
+
+### Descripción de la mejora
+
+La aplicación incluirá un botón adicional para limpiar el campo de texto del nombre y devolver el saludo al estado inicial.
+
+### Requisitos funcionales de la mejora
+
+1. La aplicación debe incluir un botón para limpiar el campo de texto.
+2. Al pulsar el botón de limpiar, el campo de texto debe quedar vacío.
+3. Al pulsar el botón de limpiar, el saludo debe volver a mostrar `Hola Mundo`.
+4. La mejora no debe eliminar la funcionalidad original de saludo personalizado.
+
+### Caso de uso de la mejora
+
+- La persona usuaria escribe un nombre en el campo.
+- La persona usuaria pulsa el botón de limpiar.
+- La aplicación vacía el campo y vuelve al saludo inicial.
+
+### Criterios de aceptación de la mejora
+
+1. Debe existir un botón visible con la etiqueta `Limpiar`.
+2. Al pulsar `Limpiar`, el input debe quedar vacío.
+3. Al pulsar `Limpiar`, el mensaje debe volver a `Hola Mundo`.
+4. Tras limpiar, la aplicación debe seguir permitiendo introducir un nuevo nombre y saludarlo.
