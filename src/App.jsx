@@ -12,6 +12,11 @@ export default function App() {
     }
   };
 
+  const handleClear = () => {
+    setName('');
+    setMessage('Hola Mundo');
+  };
+
   return (
     <main>
       <h1>{message}</h1>
@@ -22,6 +27,7 @@ export default function App() {
         placeholder="Escribe tu nombre"
       />
       <button onClick={handleGreet}>Saludar</button>
+      <button onClick={handleClear}>Limpiar</button>
     </main>
   );
 }

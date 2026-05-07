@@ -26,4 +26,20 @@ describe('App', () => {
 
     expect(screen.getByText(/hola mundo/i)).toBeInTheDocument();
   });
+
+  test('muestra el botón Limpiar', () => {
+    render(<App />);
+    expect(screen.getByRole('button', { name: /limpiar/i })).toBeInTheDocument();
+  });
+
+  test('al pulsar Limpiar vacía el campo y vuelve a Hola Mundo', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.type(screen.getByRole('textbox'), 'Ana');
+    await user.click(screen.getByRole('button', { name: /limpiar/i }));
+
+    expect(screen.getByRole('textbox')).toHaveValue('');
+    expect(screen.getByText(/hola mundo/i)).toBeInTheDocument();
+  });
 });
