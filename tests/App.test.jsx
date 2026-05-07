@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import App from '../src/App';
+import App from '../AI-DRIVEN-PROGRAMING/src/App';
 
 describe('App', () => {
   test('muestra Hola Mundo al cargar', () => {
