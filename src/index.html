@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saludo Windows 98</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="desktop">
+    <section class="window" role="region" aria-label="Ventana de saludo">
+      <header class="title-bar">
+        <div class="title-bar-text">Saludo.exe</div>
+        <div class="title-bar-controls" aria-hidden="true">
+          <button type="button" class="title-btn">_</button>
+          <button type="button" class="title-btn">□</button>
+          <button type="button" class="title-btn">✕</button>
+        </div>
+      </header>
+
+      <div class="window-body">
+        <h1 id="message">Hola Mundo</h1>
+        <label for="name">Nombre:</label>
+        <input id="name" type="text" placeholder="Escribe tu nombre" />
+
+        <div class="actions">
+          <button id="greetBtn" type="button">Saludar</button>
+          <button id="clearBtn" type="button">Limpiar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./App.jsx"></script>
+</body>
+</html>

@@ -1,33 +1,27 @@
-import { useState } from 'react';
+console.log('App.js cargado');
 
-export default function App() {
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('Hola Mundo');
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('DOM listo');
 
-  const handleGreet = () => {
-    if (name.trim()) {
-      setMessage(`Hola, ${name.trim()}`);
-    } else {
-      setMessage('Hola Mundo');
-    }
-  };
+  const nameInput = document.getElementById('name');
+  const message = document.getElementById('message');
+  const greetBtn = document.getElementById('greetBtn');
+  const clearBtn = document.getElementById('clearBtn');
 
-  const handleClear = () => {
-    setName('');
-    setMessage('Hola Mundo');
-  };
+  console.log({ nameInput, message, greetBtn, clearBtn });
 
-  return (
-    <main>
-      <h1>{message}</h1>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Escribe tu nombre"
-      />
-      <button onClick={handleGreet}>Saludar</button>
-      <button onClick={handleClear}>Limpiar</button>
-    </main>
-  );
-}
+  if (!nameInput || !message || !greetBtn || !clearBtn) {
+    console.error('Faltan elementos en el HTML');
+    return;
+  }
+
+  greetBtn.addEventListener('click', function () {
+    const name = nameInput.value.trim();
+    message.textContent = name ? 'Hola, ' + name : 'Hola Mundo';
+  });
+
+  clearBtn.addEventListener('click', function () {
+    nameInput.value = '';
+    message.textContent = 'Hola Mundo';
+  });
+});
